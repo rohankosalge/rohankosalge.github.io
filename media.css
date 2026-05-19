@@ -1,0 +1,189 @@
+/* ── media page layout ── */
+
+.media-page {
+  display: flex;
+  min-height: calc(100vh - 57px);
+}
+
+/* ── left timeline sidebar ── */
+
+.tl-sidebar {
+  position: sticky;
+  top: 57px;
+  height: calc(100vh - 57px);
+  width: 180px;
+  flex-shrink: 0;
+  overflow-y: auto;
+  padding: 2.5rem 0 2.5rem 2.5rem;
+  display: flex;
+}
+
+.tl-line {
+  position: absolute;
+  left: 2.9rem;
+  top: 2.5rem;
+  bottom: 2.5rem;
+  width: 1px;
+  background: #E0E0E0;
+}
+
+.tl-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.tl-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.55rem 0;
+  text-decoration: none;
+  font-weight: 400;
+  color: #333333;
+  transition: opacity 0.15s ease;
+}
+
+.tl-item:hover {
+  opacity: 0.55;
+}
+
+.tl-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #333333;
+  flex-shrink: 0;
+  margin-top: 0.35rem;
+  position: relative;
+  left: -3px;
+}
+
+.tl-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+}
+
+.tl-location {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #333333;
+  line-height: 1.3;
+}
+
+.tl-date {
+  font-size: 0.7rem;
+  color: #333333;
+  opacity: 0.45;
+  line-height: 1.3;
+}
+
+/* ── right video content ── */
+
+.media-content {
+  flex: 1;
+  padding: 2.5rem 2.5rem 2.5rem 2rem;
+  min-width: 0;
+}
+
+.media-section {
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid #E0E0E0;
+  margin-bottom: 3.5rem;
+}
+
+.media-section:last-child {
+  border-bottom: none;
+}
+
+.section-location {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333333;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.2rem;
+}
+
+.section-date {
+  font-size: 0.78rem;
+  color: #333333;
+  opacity: 0.45;
+  margin-bottom: 1.25rem;
+}
+
+/* ── video grid ── */
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.video-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.video-item video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #E8EDF2;
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  display: block;
+}
+
+.video-label {
+  font-size: 0.7rem;
+  color: #333333;
+  opacity: 0.45;
+}
+
+/* ── responsive ── */
+
+@media (max-width: 768px) {
+  .media-page {
+    flex-direction: column;
+  }
+
+  .tl-sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 1.25rem 1.25rem 0;
+    overflow-x: auto;
+    overflow-y: visible;
+  }
+
+  .tl-line {
+    display: none;
+  }
+
+  .tl-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tl-item {
+    padding: 0.3rem 0.6rem;
+    border: 1px solid #E0E0E0;
+    border-radius: 3px;
+  }
+
+  .tl-dot {
+    display: none;
+  }
+
+  .media-content {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
