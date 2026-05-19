@@ -128,8 +128,8 @@ a.contact-item:hover {
 }
 
 .contact-icon {
-  width: 10px;
-  height: 10px;
+  width: 13px;
+  height: 13px;
   flex-shrink: 0;
   color: var(--text);
   stroke-linecap: round;
