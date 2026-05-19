@@ -96,10 +96,10 @@ a:hover {
   border: 1px solid var(--border);
 }
 
-.avatar-icon {
-  width: 62%;
-  height: 62%;
-  fill: var(--avatar-icon);
+.avatar-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* ── contact links ── */
