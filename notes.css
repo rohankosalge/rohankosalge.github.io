@@ -1,6 +1,6 @@
 .pdf-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
@@ -22,6 +22,22 @@
   font-size: 0.7rem;
   color: #333333;
   opacity: 0.45;
+}
+
+.section-subtitle {
+  font-size: 0.78rem;
+  color: #333333;
+  opacity: 0.65;
+  margin-bottom: 1.25rem;
+}
+
+.section-subtitle ~ .section-subtitle {
+  margin-top: -1rem;
+}
+
+/* tighten date margin when subtitle follows */
+.media-section .section-date {
+  margin-bottom: 0.15rem;
 }
 
 @media (max-width: 768px) {
