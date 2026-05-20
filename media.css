@@ -46,8 +46,17 @@
   transition: opacity 0.15s ease;
 }
 
+.tl-item {
+  opacity: 0.35;
+  transition: opacity 0.2s ease;
+}
+
+.tl-item.tl-active {
+  opacity: 1;
+}
+
 .tl-item:hover {
-  opacity: 0.55;
+  opacity: 0.65;
 }
 
 .tl-dot {
