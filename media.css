@@ -137,6 +137,14 @@
   display: block;
 }
 
+.yt-embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  display: block;
+}
+
 .video-label {
   font-size: 0.7rem;
   color: #333333;
