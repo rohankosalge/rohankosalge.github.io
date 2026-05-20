@@ -29,6 +29,20 @@
   font-weight: 400;
 }
 
+/* active section tracking */
+.tl-nav .tl-item {
+  opacity: 0.35;
+  transition: opacity 0.2s ease;
+}
+
+.tl-nav .tl-item.tl-active {
+  opacity: 1;
+}
+
+.tl-nav .tl-item:hover {
+  opacity: 0.65;
+}
+
 @media (max-width: 768px) {
   .pdf-grid {
     grid-template-columns: 1fr;

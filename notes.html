@@ -287,5 +287,28 @@
     </main>
   </div>
 
+  <script>
+    const sections = document.querySelectorAll('.media-section[id]');
+    const navLinks = document.querySelectorAll('.tl-nav .tl-item');
+
+    function getActiveSection() {
+      const triggerPoint = window.scrollY + window.innerHeight * 0.3;
+      let activeId = sections[0]?.id;
+      sections.forEach(section => {
+        if (section.offsetTop <= triggerPoint) activeId = section.id;
+      });
+      return activeId;
+    }
+
+    function updateNav() {
+      const activeId = getActiveSection();
+      navLinks.forEach(link => {
+        link.classList.toggle('tl-active', link.getAttribute('href') === '#' + activeId);
+      });
+    }
+
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+  </script>
 </body>
 </html>
