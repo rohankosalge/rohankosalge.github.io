@@ -24,20 +24,9 @@
   opacity: 0.45;
 }
 
-.section-subtitle {
-  font-size: 0.78rem;
-  color: #333333;
-  opacity: 0.65;
-  margin-bottom: 1.25rem;
-}
-
-.section-subtitle ~ .section-subtitle {
-  margin-top: -1rem;
-}
-
-/* tighten date margin when subtitle follows */
-.media-section .section-date {
-  margin-bottom: 0.15rem;
+.course-sep {
+  opacity: 0.25;
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {
