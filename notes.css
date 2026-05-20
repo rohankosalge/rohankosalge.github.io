@@ -1,0 +1,31 @@
+.pdf-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.pdf-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.pdf-embed {
+  width: 100%;
+  aspect-ratio: 8.5 / 11;
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  display: block;
+}
+
+.pdf-label {
+  font-size: 0.7rem;
+  color: #333333;
+  opacity: 0.45;
+}
+
+@media (max-width: 768px) {
+  .pdf-grid {
+    grid-template-columns: 1fr;
+  }
+}
